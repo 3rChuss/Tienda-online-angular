@@ -5,10 +5,6 @@ p {
 body{
     height: 100%;
 }
-
-.bg-login {
-    background-image: url('../assets/img/login-fondo.jpg');
-}
 .bg-tienda {
     background-image: url('../assets/img/main-fondo.jpg');
 }

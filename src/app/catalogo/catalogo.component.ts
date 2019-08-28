@@ -10,10 +10,6 @@ export class CatalogoComponent implements OnInit {
 
   productos = products;
 
-  share (){
-    console.log('Productos cargados');
-  }
-
   constructor() { }
 
   ngOnInit() {

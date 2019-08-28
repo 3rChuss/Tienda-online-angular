@@ -10,6 +10,12 @@ export class TopMenuComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
+  }
+
+  pedidos() : number{
+    //return this.carrito.badge:
+    return 0;
   }
 
 }
