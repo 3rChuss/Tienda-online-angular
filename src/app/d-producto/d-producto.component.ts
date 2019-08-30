@@ -10,17 +10,24 @@ import { ActivatedRoute } from '@angular/router';
 export class DProductoComponent implements OnInit {
 
   product;
+  nombre: string;
 
   constructor(
-    private route: ActivatedRoute,
+    private route: ActivatedRoute
     ) { }
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
-      this.product = products[+params.get('nombre')]
+      this.producto(params.get('nombre'));
     })
-    console.log(this.product);
-    
+  }
+
+  producto(nombre: string){
+    let producto;
+    for (let index = 0; index < products.length; index++) {
+      const element = products[index];
+      if (element.nombre === nombre) this.product = element;
+    }    
   }
 
 }

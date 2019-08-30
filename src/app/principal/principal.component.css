@@ -1,0 +1,7 @@
+.bg-container{
+    height: 100%;
+    background: white;
+}
+.bg-tienda {
+    background-image: url('../../assets/img/main-fondo.jpg');
+}

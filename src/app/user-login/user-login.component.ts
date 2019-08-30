@@ -16,7 +16,6 @@ export class UserLoginComponent implements OnInit {
 
   ngOnInit() {
     console.log(users);
-    
   }
 
 
@@ -28,8 +27,7 @@ export class UserLoginComponent implements OnInit {
         userValido = true;
       }
     }
-    userValido ? this.router.navigate(['catalogo']) : this.error = "Alguno de los campos no es valido";
-    
+    userValido ? this.router.navigate(['catalogo']) : this.error = "Alguno de los campos no es valido"; 
   }
 
 }

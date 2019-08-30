@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { TopMenuComponent } from './top-menu/top-menu.component';
 
 @Component({
   selector: 'app-root',

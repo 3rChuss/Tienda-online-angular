@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,32 +7,24 @@ import { TopMenuComponent } from './top-menu/top-menu.component';
 import { CatalogoComponent } from './catalogo/catalogo.component';
 import { DProductoComponent } from './d-producto/d-producto.component';
 import { UserLoginComponent } from './user-login/user-login.component';
+import { ProductosComponent } from './productos/productos.component';
+import { PrincipalComponent } from './principal/principal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    UserLoginComponent,
     TopMenuComponent,
     CatalogoComponent,
     DProductoComponent,
-    UserLoginComponent
+    ProductosComponent,
+    PrincipalComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    RouterModule.forRoot([ //ruta detalles productos
-      { path: '', component: UserLoginComponent},
-      { path: 'catalogo', component: CatalogoComponent, 
-        children: [{
-          path: '',
-          redirectTo: 'catalogo', 
-          pathMatch: 'full'
-        }
-      ]
-      },
-      { path: 'producto/:nombre', component: DProductoComponent }
-    ])
+    AppRoutingModule
   ],
-  providers: [],
+  providers: [ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

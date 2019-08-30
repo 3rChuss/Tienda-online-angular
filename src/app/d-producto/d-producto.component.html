@@ -1,1 +1,22 @@
-<h1>{{product.nombre}}</h1>
+<div class="bg-container mt-3 p-3 rounded">
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>{{product.nombre}}</h3>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-8">
+            <img src="../../assets/img/{{product.imagen}}" alt="" class="rounded img-fluid border p-2">
+        </div>
+        <div class="col">
+            <span><h2>Precio: {{product.precio}}</h2></span>
+            <span><h3>Uds: {{product.unidadesDisponibles}}</h3></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col mt-3">
+            <a class="btn btn-danger" [routerLink]="['/catalogo']">Volver</a>
+        </div>
+    </div>
+</div>
