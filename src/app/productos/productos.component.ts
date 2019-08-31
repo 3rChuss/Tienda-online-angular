@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { element } from 'protractor';
 
 
 @Component({
@@ -9,10 +10,22 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ProductosComponent implements OnInit {
 
   @Input() producto;
+  pedidos = [];
+
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() {    
+  }
+
+  addPedido(unidades: number, nuevoProducto){
+    //añadir pedido al array pedidos
+    if( unidades <= this.producto.unidadesDisponibles){
+      nuevoProducto.cantidad = unidades;
+      this.pedidos.push(nuevoProducto)
+      this.producto.unidadesDisponibles = this.producto.unidadesDisponibles - unidades;
+    }
+    
   }
 
 }

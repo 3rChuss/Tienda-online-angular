@@ -4,6 +4,7 @@ import { UserLoginComponent } from './user-login/user-login.component';
 import { CatalogoComponent } from './catalogo/catalogo.component';
 import { DProductoComponent } from './d-producto/d-producto.component';
 import { PrincipalComponent } from './principal/principal.component';
+import { CarritoComponent } from './carrito/carrito.component';
 
 
 const routes: Routes = [
@@ -19,13 +20,14 @@ const routes: Routes = [
         pathMatch: 'full'
       },
       { path: '', component: CatalogoComponent },
-      { path: 'producto/:nombre', component: DProductoComponent }
+      { path: 'producto/:nombre', component: DProductoComponent },
+      { path: 'carrito', component: CarritoComponent }
     ] 
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {enableTracing:true})],
+  imports: [RouterModule.forRoot(routes, {enableTracing:false})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

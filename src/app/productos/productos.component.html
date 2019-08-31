@@ -14,9 +14,8 @@
                         class="btn btn-danger btn-sm">Ver más</a>
                 </div>
                 <div class="btn-group inline pull-right">
-                    <button class="btn btn-success btn-sm">Add <i class="fa fa-shopping-cart"></i></button>
-                    <input type="number" name="producto.nombre" value="1" min="1" max="producto.unidadesDisponibles"
-                        onChange={} />
+                    <button class="btn btn-success btn-sm" (click)="addPedido(unidades.value, producto)" >Add <i class="fa fa-shopping-cart"></i></button>
+                    <input type="number" name="producto.nombre" value="1" min="1" max="producto.unidadesDisponibles" #unidades/>
                 </div>
             </div>
         </div>

@@ -9,6 +9,7 @@ import { DProductoComponent } from './d-producto/d-producto.component';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { ProductosComponent } from './productos/productos.component';
 import { PrincipalComponent } from './principal/principal.component';
+import { CarritoComponent } from './carrito/carrito.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PrincipalComponent } from './principal/principal.component';
     CatalogoComponent,
     DProductoComponent,
     ProductosComponent,
-    PrincipalComponent
+    PrincipalComponent,
+    CarritoComponent
   ],
   imports: [
     BrowserModule,

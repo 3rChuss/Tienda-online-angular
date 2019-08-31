@@ -1,1 +1,61 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    height: 100%;
+}
+
+.bg-login {
+    background-image: url('./assets/img/login-fondo.jpg');
+}
+.bg-tienda {
+    background-image: url('./assets/img/main-fondo.jpg');
+}
+.bg-container{
+    height: 100%;
+    background: white;
+}
+.fill{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+}
+
+.navbar a{
+    color: grey;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+   opacity: 1;
+}
+
+input[type=number]{
+    width: 40px;
+}
+
+.carrito{
+    max-width: 150px;
+    max-height: 150px;
+}
+
+.table td, .table th{
+    vertical-align: middle;
+}
+
+@media (min-width: 768px) and (max-width: 980px){
+    .card-img-top{
+        max-height: 180px;
+    }
+}
+
+.card-img-top{
+    max-height: 163px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+
+
