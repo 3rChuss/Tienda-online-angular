@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { element } from 'protractor';
+import { DataService } from '../data.service';
 
 
 @Component({
@@ -12,20 +12,17 @@ export class ProductosComponent implements OnInit {
   @Input() producto;
   pedidos = [];
 
-
-  constructor() { }
+  constructor(private dataService : DataService) { }
 
   ngOnInit() {    
   }
 
   addPedido(unidades: number, nuevoProducto){
-    //añadir pedido al array pedidos
     if( unidades <= this.producto.unidadesDisponibles){
       nuevoProducto.cantidad = unidades;
-      this.pedidos.push(nuevoProducto)
       this.producto.unidadesDisponibles = this.producto.unidadesDisponibles - unidades;
+      this.dataService.newPedido(nuevoProducto);
     }
-    
   }
 
 }

@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'carrito',
@@ -8,13 +9,33 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CarritoComponent implements OnInit {
 
-  @Input() pedidos;
+  pedidos = [];
+  total: number = 0;
 
-  constructor() { }
+  constructor(private dataService : DataService, private router: Router) { 
+   }
 
-  ngOnInit() {
-    console.log(this.pedidos);
-    
+  ngOnInit() {  
+    this.updatePedidos();    
+  }
+
+  updatePedidos(){
+    let total = 0;
+    this.pedidos = this.dataService.getPedidos();
+    this.pedidos.forEach(producto => {
+      total += producto.precio*producto.cantidad
+    })
+    this.total = total;
+  }
+
+  pagar(){
+    this.pedidos = [];
+    this.dataService.pagar();
+    this.router.navigate(['catalogo']);
+  }
+
+  cancelar(){
+    this.router.navigate(['catalogo']);
   }
 
 }

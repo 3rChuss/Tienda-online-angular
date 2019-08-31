@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'top-menu',
@@ -7,15 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopMenuComponent implements OnInit {
 
-  constructor() { }
 
-  ngOnInit() {
+  constructor(private dataService: DataService) {
+    
+   }
 
+  ngOnInit() {  
   }
 
-  pedidos() : number{
-    //return this.carrito.badge:
-    return 0;
+  cantidad(){
+    return this.dataService.getBadge();
   }
 
 }

@@ -16,8 +16,14 @@
                                     <th scope='col'>Total</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                prudctos aqui
+                            <tbody *ngFor='let producto of pedidos'>
+                                <tr>
+                                    <th scope="row"><img src="../../assets/img/{{producto.imagen}}" class="img-thumbail carrito" /></th>
+                                    <th>{{producto.nombre}}</th>
+                                    <th>{{producto.cantidad}}</th>
+                                    <th>{{producto.precio}}</th>
+                                    <th>{{producto.precio*producto.cantidad}}</th>
+                                </tr>
                             </tbody>
                             <tbody>
                                 <tr class="table-light font-weight-bolder">
@@ -29,8 +35,8 @@
                     </div>
                 </div>
                 <div class="col-sm-4">
-                    <button class="btn btn-success btn-lg btn-block">PAGAR AHORA</button>
-                    <button class="btn btn-danger btn-block mt-5">Cancelar</button>
+                    <button class="btn btn-success btn-lg btn-block" (click)="pagar()">PAGAR AHORA</button>
+                    <button class="btn btn-danger btn-block mt-5" (click)="cancelar()">Cancelar</button>
                 </div>
             </div>
         </div>

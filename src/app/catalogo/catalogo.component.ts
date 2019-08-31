@@ -13,7 +13,6 @@ export class CatalogoComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.productos);
   }
 
 }

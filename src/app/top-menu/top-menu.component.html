@@ -7,7 +7,7 @@
             <ul class="navbar-nav ml-auto nav-flex-icons">
                 <li class="nav-item">
                     <a [routerLink]="['carrito']" class="nav-link waves-effect waves-light" >
-                    <i class="fa fa-shopping-cart"></i><span class="badge bg-danger">{{pedidos()}}</span>
+                    <i class="fa fa-shopping-cart"></i><span class="badge bg-danger" *ngIf="cantidad()">{{cantidad()}}</span>
                     </a>
                 </li>
                 <li class="nav-item">
