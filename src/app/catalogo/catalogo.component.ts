@@ -9,10 +9,16 @@ import { products } from '../productos';
 export class CatalogoComponent implements OnInit {
 
   productos = products;
+  productosBuscados = products;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  buscar(event: any){
+    let texto = event.target.value;
+    this.productosBuscados = this.productos.filter( pro => pro.nombre.toLowerCase().indexOf(texto.toLowerCase()) !== -1 );
   }
 
 }

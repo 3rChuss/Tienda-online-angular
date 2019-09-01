@@ -6,13 +6,13 @@
             <div class="col-sm-4">
                 <span>¿Qué estas buscando?</span>
                 <form class="form">
-                    <input class="form-control" type="search" placeholder="Buscar"/>
+                    <input class="form-control" type="text" placeholder="Buscar" (keyup)="buscar($event)"/>
                 </form>
             </div>
         </div>
         <hr />
         <div class="row">
-            <div class="col-sm-12 col-md-6 col-lg-3 mb-4" *ngFor="let producto of productos">
+            <div class="col-sm-12 col-md-6 col-lg-3 mb-4" *ngFor="let producto of productosBuscados">
                 <productos [producto]="producto"></productos>
             </div>
         </div>
